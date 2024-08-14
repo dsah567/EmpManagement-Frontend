@@ -45,23 +45,21 @@ const AddEmployee = () => {
         }
 
         // Prepare form data
-        const formData = new FormData();
-        formData.append('name', name);
-        formData.append('email', email);
-        formData.append('mobile', mobile);
-        formData.append('designation', designation);
-        formData.append('gender', gender);
-        formData.append('courses', courses);
-        if (image) {
-            formData.append('image', image);
-        }
+       console.log({ name,
+        email,
+        mobile,
+        designation,
+        gender,
+        courses:courses[0]});
+       
 
         try {
-            const response = await axios.post('/api/v1/employee/', formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
+            const response = await axios.post('/api/v1/employee/', { name,
+              email,
+              mobile,
+              designation,
+              gender,
+              courses:courses[0]});
 
             if (response.status === 201) {
                 setSuccess('Employee added successfully.');
