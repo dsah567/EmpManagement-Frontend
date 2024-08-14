@@ -36,6 +36,12 @@ const handleLogout = () => {
                 >
                   EmployeeList
                 </NavLink>  
+                <NavLink 
+                to="addemp"
+                className={({ isActive }) =>`${ isActive ?  "text-blue-400" : "text-white"}  hover:font-bold `}
+                >
+                  Add Employee
+                </NavLink> 
                 <button onClick={handleLogout} className="hover:underline">Logout</button>
               </>
             ) : (

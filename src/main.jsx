@@ -9,12 +9,14 @@ import Dashboard from './components/Dashboar.jsx'
 import EmployeeList from './components/EmployeeList'
 import Login from './components/Login'
 import Signup from './components/Signup'
+import AddEmployee from './components/AddEmployee'
 import Error from './components/Error.jsx'
 
 const route = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Header/>} errorElement={<Error/>}>
     <Route index element={<Dashboard/>} />
     <Route path="employeelist" element={<EmployeeList/>} />
+    <Route path="addemp" element={<AddEmployee/>} />
     <Route path="login" element={<Login/>} />
     <Route path="signup" element={<Signup/>} />
   </Route>
